@@ -37,7 +37,7 @@ pip install -r requirements.txt
 ## Usage
 
 ```shell
-python main.py --image_path data/dog.png --prompt "A photo of a sitting dog" --savedir result/sitting_dog
+python main.py --image_path data/dog2.png --prompt "A photo of a sitting dog" --savedir result/sitting_dog
 ```
 
 ## TODOs
