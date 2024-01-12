@@ -4,6 +4,12 @@ This repository contains an unofficial implementation of Google's paper **Imagic
 The goal of this project is to edits a single real-world image using a target text prompt.
 
 
+## References
+
+This implementation was inspired by and references the following repositories:
+
+- [dreamgaussian/dreamgaussian](https://github.com/dreamgaussian/dreamgaussian)
+
 
 ## Installation
 
@@ -30,38 +36,13 @@ pip install -r requirements.txt
 
 ## Usage
 
-- Show helper messages for all possible commands
-
 ```shell
-python app.py --help
+python main.py --image_path data/dog.png --prompt "A photo of a sitting dog" --savedir result/sitting_dog
 ```
-
-- Train Latent Edge Predictor
-
-Currently supports `--batch-size 1` only.
-
-```shell
-python app.py train-lep
-```
-
-- Sample image with Latent Edge Predictor
-
-```shell
-python app.py sample --sketch-file-path {PATH} --prompt {PROMPT}
-```
-
-- Gradio web demo (_debugging_)
-
-```shell
-python app.py demo
-```
-
 
 ## TODOs
 
-- [ ] Reproduce the bicycle example
-
-- [ ] Upload pretrained LEP
+- [ ] Reproduce the thumbs up example
 
 
 ## Acknowledgments
