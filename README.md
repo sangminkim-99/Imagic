@@ -8,9 +8,12 @@ Key distinctions from the papers include:
 - Employing LoRA to accommodate the fine-tuning stage within a 24GB VRAM environment.
 - Adjusting the learning rate for the fine-tuning stage from 5e-7 to 1e-4, aligning with the default configuration of LoRA.
 
+⚠️ Note ⚠️: The current codebase exhibits unstable output. Consequently, I am attempting to generate images every 100 iterations and selectively choosing the best result.
+
+
 ## Results
 
-| original image | 30 iters, 6/9 | 90 iters, 7/9 |
+| original image | 300 iters, 6/9 | 900 iters, 7/9 |
 |---|---|---|
 | ![input](./data/dog2.png) | ![30](./figure/3_6.png) | ![90](./figure/9_7.png)
 
