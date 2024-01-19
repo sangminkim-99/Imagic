@@ -4,6 +4,13 @@ This repository contains an unofficial implementation of Google's paper **Imagic
 The goal of this project is to edits a single real-world image using a target text prompt.
 
 
+## Results
+
+| original image | 30 iters, 6/9 | 90 iters, 7/9 |
+|---|---|---|
+| ![input](./data/dog2.png) | ![30](./figure/3_6.png) | ![90](./figure/9_7.png)
+
+
 ## References
 
 This implementation was inspired by and references the following repositories:
