@@ -13,6 +13,8 @@ Key distinctions from the papers include:
 
 ## Results
 
+Prompt: a photo of a sitting dog
+
 | original image | 300 iters, 6/9 | 900 iters, 7/9 |
 |---|---|---|
 | ![input](./data/dog2.png) | ![30](./figure/3_6.png) | ![90](./figure/9_7.png)
