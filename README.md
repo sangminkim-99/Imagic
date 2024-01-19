@@ -3,6 +3,10 @@
 This repository contains an unofficial implementation of Google's paper **Imagic: Text-Based Real Image Editing with Diffusion Models**. 
 The goal of this project is to edits a single real-world image using a target text prompt.
 
+Key distinctions from the papers include:
+
+- Employing LoRA to accommodate the fine-tuning stage within a 24GB VRAM environment.
+- Adjusting the learning rate for the fine-tuning stage from 5e-7 to 1e-4, aligning with the default configuration of LoRA.
 
 ## Results
 
