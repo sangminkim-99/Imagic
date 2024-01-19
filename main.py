@@ -83,17 +83,18 @@ def main(args):
 
         pbar.set_description(f"Step B, loss: {loss.item():.5f}")
 
-    # (C) Interpolation & Generation
-    NUM_SAMPLES = 20
-    with torch.no_grad():
-        for i in range(NUM_SAMPLES):
-            interp_strength = i / (NUM_SAMPLES - 1)
-            e_interp = e_tgt * interp_strength + diffusion_model.embeddings['pos'] * (1 - interp_strength)
-            output = diffusion_model.prompt_to_img(
-                e_interp
-            )
-            output_image = Image.fromarray(output[0])
-            output_image.save(f'{args.savedir}/C_{interp_strength}.png')
+        # (C) Interpolation & Generation
+        if i % 100 == 0 and i != 0:
+            NUM_SAMPLES = 20
+            with torch.no_grad():
+                for j in range(NUM_SAMPLES):
+                    interp_strength = j / (NUM_SAMPLES - 1)
+                    e_interp = e_tgt * interp_strength + diffusion_model.embeddings['pos'] * (1 - interp_strength)
+                    output = diffusion_model.prompt_to_img(
+                        e_interp
+                    )
+                    output_image = Image.fromarray(output[0])
+                    output_image.save(f'{args.savedir}/C_{i}_{interp_strength}.png')
 
     
 if __name__ == "__main__":
